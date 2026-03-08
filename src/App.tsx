@@ -51,13 +51,16 @@ function App() {
                 Siwoo You<sup className="text-sm ml-0.5">1</sup>
               </a>
               <a href="#" className="hover:text-primary-600 transition-colors">
-                Jangho Lee<sup className="text-sm ml-0.5">1</sup>
+                Jangho Lee<sup className="text-sm ml-0.5">1†</sup>
               </a>
             </div>
 
-            <div className="text-sm md:text-base mb-2">
+            <div className="text-sm md:text-base mb-2 flex gap-4">
               <span>
                 <sup className="mr-0.5 font-bold">*</sup>Equal contribution
+              </span>
+              <span>
+                <sup className="mr-0.5 font-bold">†</sup>Corresponding author
               </span>
             </div>
 
