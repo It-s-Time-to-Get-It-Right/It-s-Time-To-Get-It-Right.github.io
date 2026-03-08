@@ -40,11 +40,11 @@ function App() {
           </div>
 
           <div className="flex flex-col items-center justify-center text-slate-800 mb-10">
-            <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-lg md:text-xl font-medium mb-3">
-              <a href="#" className="hover:text-primary-600 transition-colors">
+            <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-lg font-medium mb-3">
+              <a href="https://allchiever.github.io/" className="hover:text-primary-600 transition-colors">
                 Jaeha Choi<sup className="text-sm ml-0.5">1*</sup>
               </a>
-              <a href="#" className="hover:text-primary-600 transition-colors">
+              <a href="https://www.jinleevv.dev/" className="hover:text-primary-600 transition-colors">
                 Jin Won Lee<sup className="text-sm ml-0.5">2*</sup>
               </a>
               <a href="#" className="hover:text-primary-600 transition-colors">
@@ -55,12 +55,12 @@ function App() {
               </a>
             </div>
 
-            <div className="text-sm md:text-base mb-2 flex gap-4">
+            <div className="text-lg font-medium mb-2 flex gap-4">
               <span>
-                <sup className="mr-0.5 font-bold">*</sup>Equal contribution
+                <sup className="mr-0.5 font-bold">*</sup>Equal contribution.
               </span>
               <span>
-                <sup className="mr-0.5 font-bold">†</sup>Corresponding author
+                <sup className="mr-0.5 font-bold">†</sup>Corresponding author.
               </span>
             </div>
 
@@ -85,7 +85,7 @@ function App() {
               Paper
             </a>
             <a
-              href="#"
+              href="https://github.com/allchiever/It-s-Time-to-Get-It-Right"
               className="flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-3.5 rounded-full bg-white text-slate-700 font-medium border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition-all shadow-sm group"
             >
               <Github className="w-5 h-5 group-hover:scale-110 transition-transform" />
