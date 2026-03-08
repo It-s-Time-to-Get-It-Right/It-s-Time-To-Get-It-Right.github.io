@@ -23,18 +23,18 @@ function App() {
         <div className="absolute inset-0 bg-gradient-to-b from-primary-50/50 to-transparent -z-10" />
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-6">
-            <img
+          <div className="flex flex-col items-center justify-center gap-4 mb-6">
+            {/* <img
               src="/assets/mascot.png"
               alt="Owl Mascot"
               className="w-24 h-24 md:w-32 md:h-32 object-contain shrink-0"
-            />
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight text-center md:text-left whitespace-nowrap">
-              It's Time To Get It Right
+            /> */}
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight text-center max-w-4xl">
+              It's Time to Get It Right: Improving Analog Clock Reading and Clock-Hand Spatial Reasoning in Vision-Language Models.
             </h1>
           </div>
 
-          <div className="inline-flex items-center gap-2 px-3 rounded-full bg-primary-100/50 text-primary-700 text-sm font-medium mb-8 border border-primary-200/50">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-100/50 text-primary-700 text-sm font-medium mb-6 border border-primary-200/50">
             <span className="flex h-2 w-2 rounded-full bg-primary-500"></span>
             CVPR 2026 Findings
           </div>
