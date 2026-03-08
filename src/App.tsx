@@ -92,7 +92,7 @@ function App() {
               Code
             </a>
             <a
-              href="#"
+              href="https://huggingface.co/datasets/jaeha-choi/TickTockVQA"
               className="flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-3.5 rounded-full bg-white text-slate-700 font-medium border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition-all shadow-sm group"
             >
               <Database className="w-5 h-5 group-hover:scale-110 transition-transform" />
