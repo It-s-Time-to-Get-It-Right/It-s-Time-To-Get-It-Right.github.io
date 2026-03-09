@@ -51,16 +51,13 @@ function App() {
                 Siwoo You<sup className="text-sm ml-0.5">1</sup>
               </a>
               <a href="#" className="hover:text-primary-600 transition-colors">
-                Jangho Lee<sup className="text-sm ml-0.5">1†</sup>
+                Jangho Lee<sup className="text-sm ml-0.5">1</sup>
               </a>
             </div>
 
             <div className="text-lg font-medium mb-2 flex gap-4">
               <span>
                 <sup className="mr-0.5 font-bold">*</sup>Equal contribution.
-              </span>
-              <span>
-                <sup className="mr-0.5 font-bold">†</sup>Corresponding author.
               </span>
             </div>
 
@@ -116,27 +113,26 @@ function App() {
             <p className="mb-6">
               Advances in vision-language models (VLMs) have achieved remarkable
               success on complex multimodal reasoning tasks, leading to the
-              assumption that they should also ex- cel at reading analog clocks.
-              However, contrary to this ex- pectation, our study reveals that
+              assumption that they should also excel at reading analog clocks.
+              However, contrary to this expectation, our study reveals that
               reading analog clocks in real-world environments remains a
               significant challenge for state-of-the-art VLMs. Existing analog
               clock datasets are largely synthetic or planar with limited
               stylistic diversity and minimal background context, failing to
-              capture the vi- sual variability of real-world scenes. As a
+              capture the visual variability of real-world scenes. As a
               result, VLMs trained on such data exhibit weak spatial-temporal
-              reason- ing, frequently confusing the hour and minute hands and
-              struggling under common visual conditions such as oc- clusion,
+              reasoning, frequently confusing the hour and minute hands and
+              struggling under common visual conditions such as occlusion,
               lighting variation, and cluttered backgrounds. To address this
-              issue, we introduce TickTockVQA, a human- annotated dataset
-              containing analog clocks in diverse real- world scenarios.
+              issue, we introduce TickTockVQA, a human annotated dataset
+              containing analog clocks in diverse real-world scenarios.
               TickTockVQA provides explicit hour and minute annotations, and
               includes an AM/PM tag when it is inferable from the visual
               context. Furthermore, we propose Swap-DPO, a direct preference
-              optimization based fine- tuning framework to align model reasoning
-              toward accu- rate time interpretation. Experimental results
+              optimization based fine-tuning framework to align model reasoning
+              toward accurate time interpretation. Experimental results
               demonstrate that our approach substantially enhances clock reading
-              ac- curacy and robustness under real-world conditions, estab-
-              lishing a foundation for future research on spatial-temporal
+              accuracy and robustness under real-world conditions, establishing a foundation for future research on spatial-temporal
               reasoning and visual understanding in VLMs. The dataset and code
               will be publicly released upon publication.
             </p>
@@ -144,8 +140,72 @@ function App() {
         </div>
       </section>
 
-      {/* Qualitative Results */}
+      {/* Dataset Details Section */}
       <section className="py-16 md:py-20 bg-slate-50 border-t border-slate-100">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 mb-4">
+              TickTockVQA: A Real-World Analog Clock Dataset
+            </h2>
+            <div className="h-1 w-20 bg-primary-500 rounded-full mx-auto" />
+          </div>
+
+          <div className="prose prose-lg prose-slate mx-auto text-slate-600 text-justify leading-relaxed mb-10">
+            <p className="mb-4">
+              State-of-the-art vision-language models often fail on analog
+              clocks because existing datasets are largely synthetic or lack
+              diverse real-world contexts. To address this, we introduce{" "}
+              <strong>TickTockVQA</strong>, a comprehensive human-annotated
+              dataset of ~12K images collected from diverse real-world scenes
+              (e.g., COCO, Visual Genome, Open Images).
+            </p>
+            <p>
+              Unlike synthetic datasets, TickTockVQA captures extreme visual
+              variability, including variations in lighting, perspective
+              distortions, occlusions, and diverse clock designs (Arabic,
+              Roman, no numerals). Each image is explicitly annotated with the
+              hour, minute, and an AM/PM tag where inferable. Our ablation
+              studies demonstrate that training on TickTockVQA yields
+              significantly better spatial-temporal reasoning compared to
+              photorealistic synthetic data, proving that real-world contextual
+              complexity is crucial for robust clock reading.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start mb-10">
+            <div className="flex flex-col gap-4">
+              <div className="w-full flex justify-center bg-white p-4 rounded-xl shadow-sm border border-slate-200">
+                <img
+                  src="/assets/figure1.png"
+                  alt="Impact of training data quality"
+                  className="w-full h-auto object-contain max-h-[400px]"
+                  loading="lazy"
+                />
+              </div>
+              <p className="text-sm text-center text-slate-500 font-medium">
+                <strong>Figure 1.</strong> Impact of training data quality on Qwen2.5-VL-7B performance. We compare Qwen2.5-VL-7B trained on three datasets: TickTockVQA (real-world), SynClock (OpenCV-based synthetic), and CtrlClock (diffusion-generated synthetic). Training on TickTockVQA achieves the best performance with 99.9 minutes MAE.
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-4">
+              <div className="w-full flex justify-center bg-white p-4 rounded-xl shadow-sm border border-slate-200">
+                <img
+                  src="/assets/figure3.png"
+                  alt="Examples of challenging visual variations in TickTockVQA"
+                  className="w-full h-auto object-contain max-h-[400px]"
+                  loading="lazy"
+                />
+              </div>
+              <p className="text-sm text-center text-slate-500 font-medium">
+                <strong>Figure 3.</strong> Examples of challenging visual variations in the TickTockVQA test set. The figure highlights diverse transformations and ambiguities that models must handle for robust clock understanding.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Qualitative Results section previously started here */}
+      <section className="py-16 md:py-20 bg-white border-t border-slate-100">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 mb-4">
@@ -154,7 +214,7 @@ function App() {
             <div className="h-1 w-20 bg-primary-500 rounded-full mx-auto" />
           </div>
 
-          <div className="prose prose-lg prose-slate mx-auto text-slate-600 leading-relaxed text-center mb-10">
+          <div className="prose prose-lg prose-slate mx-auto text-slate-600 leading-relaxed text-left mb-10">
             <p>
               Comparison of model predictions on the clock reading task. Our
               model, It's Time To Get It Right (ITGR), correctly identifies the
@@ -175,17 +235,17 @@ function App() {
         </div>
       </section>
 
-      {/* Main Results Table */}
+      {/* Quantitative Results and Performance Analysis Section */}
       <section className="py-16 md:py-20 bg-white border-t border-slate-100 overflow-hidden">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 mb-4">
-              Comprehensive Evaluation
+              Quantitative Results and Performance Analysis
             </h2>
             <div className="h-1 w-20 bg-primary-500 rounded-full mx-auto" />
           </div>
 
-          <div className="prose prose-sm prose-slate mx-auto text-slate-600 text-center mb-8">
+          <div className="prose prose-sm prose-slate mx-auto text-slate-600 text-left mb-8">
             <p>
               Comprehensive evaluation results for Gemma3-12B, Qwen2.5-VL-7B,
               and Llama-3.2-11B on the TickTockVQA test set. <strong>B</strong>{" "}
@@ -194,7 +254,7 @@ function App() {
             </p>
           </div>
 
-          <div className="overflow-x-auto pb-4">
+          <div className="overflow-x-auto pb-10">
             <table className="w-full text-sm text-left text-slate-600 border-collapse min-w-[1000px]">
               <thead className="text-xs text-slate-700 uppercase bg-slate-50 border-b-2 border-slate-200">
                 <tr>
@@ -496,6 +556,32 @@ function App() {
               </tbody>
             </table>
           </div>
+
+          <div className="prose prose-lg prose-slate mx-auto text-slate-600 text-justify leading-relaxed mb-10 max-w-4xl">
+            <h3 className="text-2xl font-semibold tracking-tight text-slate-900 mb-4 mt-8">
+              Performance by Clock Type
+            </h3>
+            <p>
+              Breaking down the ITGR model performance across seven distinct clock
+              configurations reveals that spatial reasoning deeply depends on
+              physical form factors and image conditions, rather than just
+              dataset scale.
+            </p>
+          </div>
+
+          <div className="w-full flex flex-col justify-center gap-4 max-w-4xl mx-auto">
+            <div className="w-full flex justify-center bg-white p-4 rounded-xl shadow-sm border border-slate-200">
+              <img
+                src="/assets/figure_s3.png"
+                alt="ITGR accuracy breakdown by clock type"
+                className="w-full h-auto max-w-2xl object-contain"
+                loading="lazy"
+              />
+            </div>
+            <p className="text-sm text-center text-slate-500 font-medium max-w-3xl mx-auto">
+              <strong>Figure S3.</strong> ITGR accuracy breakdown by clock type. Performance varies significantly across categories. Graphic/Illustrated clocks achieve the highest accuracy (62.71%) due to high contrast and clean contours, while wristwatches show the lowest performance (27.99%).
+            </p>
+          </div>
         </div>
       </section>
 
@@ -509,7 +595,59 @@ function App() {
             <div className="h-1 w-20 bg-primary-500 rounded-full mx-auto" />
           </div>
 
-          <div className="prose prose-lg prose-slate mx-auto text-slate-600 leading-relaxed text-center mb-10">
+          <div className="prose prose-lg prose-slate mx-auto text-slate-600 leading-relaxed text-justify mb-10">
+            <p className="mb-4">
+              While Supervised Fine-Tuning (SFT) adapts models to the clock
+              domain, they frequently confuse the hour and minute hands—a critical
+              spatial reasoning failure. We introduce <strong>Swap-DPO</strong>, a
+              targeted preference-alignment method to correct this specific
+              ambiguity.
+            </p>
+            <p>
+              By providing the model with a mathematically "swapped" time
+              (reversing the hour and minute hands' geometric roles) as a
+              hard-negative response, Swap-DPO explicitly forces the model to
+              learn the distinct semantic roles of each hand. Quantitatively,
+              this approach reduced the pure hand-swap error gap by up to 16.5%
+              relative to the baseline. For Llama-3.2-11B, Swap-DPO paired with
+              TickTockVQA boosted full-time accuracy from a mere 1.41%
+              (zero-shot) to 46.22% (ITGR), simultaneously reducing the heavy
+              tail of severe prediction errors and establishing a new benchmark
+              for fine-grained spatial reasoning in VLMs.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start mb-12">
+            <div className="flex flex-col gap-4">
+              <div className="w-full flex justify-center bg-white p-4 rounded-xl shadow-sm border border-slate-200 h-full">
+                <img
+                  src="/assets/figure5.png"
+                  alt="Quantitative comparison of clock reading accuracy"
+                  className="w-full h-auto object-contain max-h-[350px]"
+                  loading="lazy"
+                />
+              </div>
+              <p className="text-sm text-center text-slate-500 font-medium">
+                <strong>Figure 5.</strong> Quantitative comparison of clock reading accuracy. Each plot visualizes the relationship between ground truth (x-axis) and model predicted time (y-axis) in minutes. The gray dashed line (y=x) indicates perfect predictions. Left: Zero-shot baseline. Right: Our ITGR model with the Swap-DPO framework.
+              </p>
+            </div>
+            
+            <div className="flex flex-col gap-4">
+              <div className="w-full flex justify-center bg-white p-4 rounded-xl shadow-sm border border-slate-200 h-full">
+                <img
+                  src="/assets/figure6.png"
+                  alt="Statistical analysis of time reading errors"
+                  className="w-full h-auto object-contain max-h-[350px]"
+                  loading="lazy"
+                />
+              </div>
+              <p className="text-sm text-center text-slate-500 font-medium">
+                <strong>Figure 6.</strong> Statistical analysis of time reading errors. Left: Distribution of prediction errors (in minutes) with histogram and kernel density estimation (KDE). ITGR reduces the heavy tail of large errors. Right: Cumulative probability of samples within a given absolute error threshold. Compares Zero-shot baseline vs. ITGR model.
+              </p>
+            </div>
+          </div>
+
+          <div className="prose prose-lg prose-slate mx-auto text-slate-600 leading-relaxed text-left mb-10">
             <p>
               <strong>
                 Qualitative examples of hand-swap error correction by Swap-DPO.
