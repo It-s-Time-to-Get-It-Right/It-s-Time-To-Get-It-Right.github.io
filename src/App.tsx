@@ -4,7 +4,13 @@ import { Github, FileText, Database, Copy, Check } from "lucide-react";
 function App() {
   const [copied, setCopied] = useState(false);
 
-  const bibtex = `@inproceedings{}`;
+  const bibtex = `@article{choi2026clockreasoning,
+  title   = {It's Time to Get It Right: Improving Analog Clock Reading and Clock-Hand Spatial Reasoning in Vision-Language Models},
+  author  = {Choi, Jaeha and Lee, Jin Won and You, Siwoo and Lee, Jangho},
+  journal = {arXiv preprint arXiv:2603.08011},
+  year    = {2026},
+  url     = {https://arxiv.org/abs/2603.08011}
+}`;
 
   const copyToClipboard = async () => {
     try {
@@ -75,7 +81,9 @@ function App() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="#"
+              href="https://arxiv.org/abs/2603.08011"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-3.5 rounded-full bg-slate-900 text-white font-medium hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 group"
             >
               <FileText className="w-5 h-5 group-hover:scale-110 transition-transform" />
@@ -150,6 +158,11 @@ function App() {
             <div className="h-1 w-20 bg-primary-500 rounded-full mx-auto" />
           </div>
 
+          <div className="rounded-xl bg-amber-50 border border-amber-200/60 px-4 py-3 mb-6 text-amber-800 text-sm font-medium">
+            💛 If you use the TickTockVQA dataset, we would appreciate a{" "}
+            <a href="https://huggingface.co/datasets/jaeha-choi/TickTockVQA" target="_blank" rel="noopener noreferrer" className="underline hover:text-amber-900">Hugging Face 🤗</a> like and a{" "}
+            <a href="https://github.com/allchiever/It-s-Time-to-Get-It-Right" target="_blank" rel="noopener noreferrer" className="underline hover:text-amber-900">GitHub ⭐ Star</a>. Thank you!
+          </div>
           <div className="prose prose-lg prose-slate mx-auto text-slate-600 text-justify leading-relaxed mb-10">
             <p className="mb-4">
               State-of-the-art vision-language models often fail on analog
