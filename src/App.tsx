@@ -158,11 +158,6 @@ function App() {
             <div className="h-1 w-20 bg-primary-500 rounded-full mx-auto" />
           </div>
 
-          <div className="rounded-xl bg-amber-50 border border-amber-200/60 px-4 py-3 mb-6 text-amber-800 text-sm font-medium">
-            💛 If you use the TickTockVQA dataset, we would appreciate a{" "}
-            <a href="https://huggingface.co/datasets/jaeha-choi/TickTockVQA" target="_blank" rel="noopener noreferrer" className="underline hover:text-amber-900">Hugging Face 🤗</a> like and a{" "}
-            <a href="https://github.com/allchiever/It-s-Time-to-Get-It-Right" target="_blank" rel="noopener noreferrer" className="underline hover:text-amber-900">GitHub ⭐ Star</a>. Thank you!
-          </div>
           <div className="prose prose-lg prose-slate mx-auto text-slate-600 text-justify leading-relaxed mb-10">
             <p className="mb-4">
               State-of-the-art vision-language models often fail on analog
@@ -710,6 +705,11 @@ function App() {
               <code>{bibtex}</code>
             </pre>
           </div>
+          <p className="mt-6 text-center text-slate-600 font-medium">
+            If you find our work useful, we would appreciate a{" "}
+            <a href="https://huggingface.co/datasets/jaeha-choi/TickTockVQA" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">Hugging Face 🤗</a> like and a{" "}
+            <a href="https://github.com/allchiever/It-s-Time-to-Get-It-Right" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">GitHub ⭐ Star</a>. Thank you!
+          </p>
         </div>
       </section>
 
